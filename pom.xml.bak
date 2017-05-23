@@ -62,43 +62,7 @@
 						</manifestFile> -->
 					</archive>
 				</configuration>
-			</plugin>	
-			
-		    <plugin>
-		                  <artifactId>maven-assembly-plugin</artifactId>
-		                  <configuration>
-		  					<archive>
-		  						<manifestEntries>
-		  							<Premain-Class>objectexplorer.InstrumentationGrabber</Premain-Class>
-		  						</manifestEntries>
-
-		  						<!-- 
-		  							NOTE: these two options should also work, but don't! 
-		  							Therefore I removed the MANIFEST.MF from the codebase. 
-		  							See original documentation at https://maven.apache.org/plugins/maven-jar-plugin/ 
-		  						-->
-		  						<!-- <manifestFile>
-		  							${basedir}/src/main/resources/META-INF/MANIFEST.MF
-		  						</manifestFile> -->
-		  						<!-- <manifestFile>
-		  							${project.build.outputDirectory}/META-INF/MANIFEST.MF
-		  						</manifestFile> -->
-		  					</archive>
-		                     
-		                      <descriptorRefs>
-		                          <descriptorRef>jar-with-dependencies</descriptorRef>
-		                      </descriptorRefs>
-		                  </configuration>
-		                  <executions>
-		                      <execution>
-		                          <id>make-assembly</id> <!-- this is used for inheritance merges -->
-		                          <phase>install</phase> <!-- 指定在打包节点执行jar包合并操作 -->
-		                          <goals>
-		                              <goal>single</goal>
-		                          </goals>
-		                      </execution>
-		                  </executions>
-		              </plugin>		
+			</plugin>			
 		</plugins>
 	</build>
 
